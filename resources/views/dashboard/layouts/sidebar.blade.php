@@ -9,8 +9,8 @@
                     <span class="hide-menu">Home</span>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link {{ request()->is('dashboard') ? 'active' : '' }}" href="/dashboard"
-                        aria-expanded="false">
+                    <a class="sidebar-link {{ request()->is('dashboard') ? 'active' : '' }}"
+                        href="{{ route('dashboard') }}" aria-expanded="false">
                         <span>
                             <i class="ti ti-layout-dashboard"></i>
                         </span>

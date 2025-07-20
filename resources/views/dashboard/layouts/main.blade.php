@@ -19,14 +19,18 @@
             <!--  Header End -->
             <div class="container-fluid">
                 <!--  Breadcrumb Start -->
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb bg-light rounded-3 p-3 shadow-sm">
-                            <li class="breadcrumb-item"><a href="/dashboard"
-                                    class="text-decoration-none text-primary"><i class="fas fa-home"></i> Dashboard</a>
-                            </li>
-                            <li class="breadcrumb-item active text-muted" aria-current="page"></li>
-                        </ol>
-                    </nav>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb bg-light rounded-3 p-3 shadow-sm">
+                        <li class="breadcrumb-item">
+                            <a href="{{ route('dashboard') }}" class="text-decoration-none text-primary">
+                                <i class="fas fa-home"></i> Dashboard
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item active text-muted" aria-current="page">
+                            {{ ucfirst(last(request()->segments())) }}
+                        </li>
+                    </ol>
+                </nav>
                 <!--  Breadcrumb End -->
 
                 <!--  Row 1 -->
